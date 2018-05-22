@@ -1,5 +1,8 @@
 FROM ubuntu:16.04
 
+
+MAINTAINER Prajwal Padmanabh "prajwalvp@mpifr-bonn.mpg.de"
+
 RUN apt-get -y check && \
     apt-get -y update && \
     apt-get install -y apt-utils apt-transport-https software-properties-common python-software-properties && \

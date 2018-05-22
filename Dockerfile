@@ -52,9 +52,6 @@ RUN mkdir -p /home/psr/software
 WORKDIR $PSRHOME
 
 
-#COPY pgplot5.2.tar.gz /usr/local/src/
-#COPY drivers.list /usr/local/src/
-
 #PGPLOT
 #WORKDIR /usr/local/src/
 #RUN tar zxvf pgplot5.2.tar.gz && \
@@ -87,6 +84,6 @@ RUN mkdir bin
 
 RUN make 
 
-
+COPY score.py $PSRHOME/pulsareace-code
 
 

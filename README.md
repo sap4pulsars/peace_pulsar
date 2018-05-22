@@ -17,6 +17,6 @@ Please execute the following commands:
 
 This generates a .qual file with multiple scores. The last score generated is the overall score.
 
-2) python  score.py 
+2) python  /home/psr/software/pulsareace-code/score.py 
 
 This prints the final score to stdout

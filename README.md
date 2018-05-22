@@ -10,6 +10,8 @@ Code link : https://sourceforge.net/p/pulsareace/code/ci/master/tree/
 
 Command : 
 
-1) /home/psr/software/pulsareace-code/bin/autos2.exe -f <pfd filename> 
+1) /home/psr/software/pulsareace-code/bin/autos2.exe -f [filename]
 
-2)  python score.py
+This generates a .qual file with multiple scores. The last score generated is the overall score.
+
+2)  Execute the command : python  score.py which prints the final score to stdout

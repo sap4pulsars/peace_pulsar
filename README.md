@@ -13,7 +13,7 @@ Code link : https://sourceforge.net/p/pulsareace/code/ci/master/tree/
 
 Please execute the following commands:
 
-1) docker run -i /home/psr/software/pulsareace-code/bin/autos2.exe -f [filename] (files need to )
+1) docker run -i /home/psr/software/pulsareace-code/bin/autos2.exe -f [filename] (files need to be of pfd format )
 
 This generates a .qual file with multiple scores. The last score generated is the overall score.
 

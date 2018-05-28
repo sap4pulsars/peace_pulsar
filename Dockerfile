@@ -22,6 +22,9 @@ RUN apt-get --no-install-recommends -y install \
     gfortran \
     wget \
     git \
+    python \
+    python-dev \
+    python-pip \
     libcfitsio-dev \
     pgplot5 \
     swig2.0 \
@@ -43,6 +46,16 @@ RUN apt-get --no-install-recommends -y install \
     imagemagick \
     libgsl0-dev	\ 
     && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --upgrade pip 
+WORKDIR /usr/bin
+RUN rm pip
+COPY pip /usr/bin/pip 
+
+RUN pip install pip -U && \
+    pip install setuptools -U && \
+    pip install bson && \
+    pip install pyKafka 
 
 
 ENV HOME /home/psr
@@ -85,5 +98,6 @@ RUN mkdir bin
 RUN make 
 
 COPY score.py $PSRHOME/pulsareace-code
-
+COPY ./bson_send.py $PSRHOME/pulsareace-code
+COPY ./bson_receive.py $PSRHOME/pulsareace-code
 
